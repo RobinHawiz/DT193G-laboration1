@@ -24,8 +24,8 @@
     <nav>
       <ul>
         <li><a href="../">Laboration_1</a></li>
-        <li><a href="../tailwind/">Tailwind</a></li>
-        <li><a href="../bootstrap/">Bootstrap</a></li>
+        <li><a href="../tailwind/index.html">Tailwind</a></li>
+        <li><a href="../bootstrap/index.html">Bootstrap</a></li>
       </ul>
     </nav>
     <main>
@@ -57,6 +57,32 @@
             href="https://www.reddit.com/r/AZURE/comments/1d2uoyc/the_horror_stories_of_unexpected_costs_for_azure/"
             >www.reddit.com/r/AZURE/comments/1d2uoyc/the_horror_stories_of_unexpected_costs_for_azure/</a
           >
+        </p>
+        <p>
+          Innan jag publicerar webbplatsen måste jag skapa en så kallad resurs
+          där jag definierar webbappens URL (laboration1.azurewebsites.net),
+          runtime stack (Node 24 LTS), operativsystem (Linux), region (Sweden
+          Central), prisplan (Free F1) och Public access (On). Man kan
+          konfigurera fler saker, men detta är vad jag behöver för denna
+          uppgift. Därefter skapar jag resursen och väntar tills den har
+          skapats. När appen är uppe går jag till Deployment Center där jag kan
+          ställa in var min kod finns (GitHub), organisation (RobinHawiz),
+          repository (DT193-laboration1), branch (main), workflow-alternativ
+          (add a workflow), authentication type (User-assigned identity) och
+          subscription (Azure for Students). När jag har ställt in detta skapas
+          en YAML-fil (main_laboration1.yml) åt mig som pushas till min valda
+          branch och webbplatsen laddas upp via GitHub Actions. YAML är ett
+          dataserialiseringsformat som är tänkt att vara lättläst för människor
+          och används ofta för konfigurationsfiler. och voilà, webbplatsen har
+          nu laddats upp och körs (man behöver vänta en liten stund).
+        </p>
+        <p>
+          PS: Jag behövde ändra YAML-filen en aning och lägga till pm2 serve
+          /home/site/wwwroot $PORT --no-daemon som startkommando för att öppna
+          startsidans index.html. Jag borde nog ha valt att publicera
+          webbplatsen via Azure Static Web Apps och inte Azure App Service
+          (vilket jag lärt mig nu). Eftersom Azure App Service inte är optimerad
+          för statiska webbplatser passar Azure Static Web Apps bättre.
         </p>
       </section>
     </main>
