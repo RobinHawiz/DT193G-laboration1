@@ -1,0 +1,23 @@
+@import "bootstrap/scss/bootstrap";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        90: 90%,
+      ),
+    ),
+    "max-width": (
+      property: max-width,
+      class: mw,
+      values: (
+        800px: 800px,
+      ),
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";

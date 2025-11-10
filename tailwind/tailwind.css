@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #191b19;
+  --color-white: #f8f8ff;
+  --font-montserrat: "Montserrat", sans-serif;
+  --text-size-p: 1.6rem;
+  --breakpoint-mobile: 30rem;
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    @apply text-[62.5%] leading-[1.9rem];
+  }
+
+  body {
+    @apply font-montserrat text-size-p text-white bg-dark;
+  }
+
+  nav {
+    @apply min-h-[10vh] bg-dark brightness-107 flex justify-center;
+
+    ul {
+      @apply flex-center gap-8 max-mobile:gap-1;
+    }
+  }
+
+  main {
+    @apply mx-[10%] pt-8;
+  }
+
+  section {
+    @apply mb-8;
+  }
+
+  section.info {
+    @apply max-w-7xl mx-auto flex-center flex-col gap-8;
+  }
+
+  table {
+    @apply mx-auto max-w-240 w-full;
+  }
+
+  table,
+  th,
+  td {
+    @apply border-solid border-[0.1rem] border-white;
+  }
+
+  th,
+  td {
+    @apply p-4;
+  }
+
+  li {
+    @apply p-4 list-none;
+  }
+
+  h1 {
+    @apply font-bold text-center text-[2rem] leading-[2.4rem];
+  }
+
+  a {
+    @apply hover:underline;
+  }
+}

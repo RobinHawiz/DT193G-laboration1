@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dt193g-laboration1</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand bg-dark">
+      <div class="container flex align-items-center justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-link">
+            <a class="link-white" href="../">Laboration_1</a>
+          </li>
+          <li class="nav-link"><a href="../tailwind/">Tailwind</a></li>
+          <li class="nav-link"><a href="../publicering/">Publicering</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="mx-auto w-90 mw-800px">
+      <section class="mx-auto">
+        <h1>Tailwind</h1>
+        <div>
+          <p class="mb-8">
+            <a href="https://getbootstrap.com/">Bootstrap</a> är ett öppet
+            källkodsramverk för CSS. Jämfört med utility-first ramverket
+            Tailwind fokuserar Bootstrap mer på färdiga komponentklasser (till
+            exempel knappar, tabeller, formulär och navbars). Bootstrap erbjuder
+            också många utility-klasser och sedan version 5 kan de utökas via
+            Utility API. Utöver CSS innehåller Bootstrap ett
+            JavaScript-bibliotek som ger interaktivitet åt komponenterna, till
+            exempel tooltips, dropdowns och modaler. I mitt formulär använder
+            jag en tooltip på knappen Skicka, vilket kräver att tooltips skapas
+            via Bootstrap JS.
+          </p>
+          <p class="mb-8">
+            En fördel med Bootstrap är att ramverket avsevärt underlättar
+            frontendutveckling tack vare färdigstylade komponenter. Behöver man
+            en design som är tillräckligt bra och vill lägga mer tid på
+            funktionalitet är ramverket utmärkt. Har man däremot mer tid för
+            frontend och vill skapa en mer skräddarsydd design kan de
+            färdigstylade komponenterna bli en nackdel, eftersom de kräver mer
+            arbete att anpassa.
+          </p>
+          <p>
+            Min erfarenhet av Bootstrap är överlag mycket positiv. Att jag först
+            lärde mig Tailwind CSS hjälpte, eftersom båda ramverken stylar
+            HTML-element via klassnamn. När jag jämför tiden det tog att styla
+            en sida med Tailwind med den här sidan som stylades med Bootstrap
+            gick utvecklingen betydligt snabbare med Bootstrap, främst tack vare
+            de färdigstylade komponenterna.
+          </p>
+        </div>
+      </section>
+      <section class="mx-auto mw-800px">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Namn</th>
+                <th>Ras</th>
+                <th>Beskrivning</th>
+                <th>Till salu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Atlas</td>
+                <td>Svenskt varmblod</td>
+                <td>Ambitiös hopphäst.</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td>Aisha</td>
+                <td>Arabiskt fullblod</td>
+                <td>Uthållig, vänlig.</td>
+                <td>Nej</td>
+              </tr>
+              <tr>
+                <td>Jarl</td>
+                <td>Frieser</td>
+                <td>Uttrycksfull, kräver erfaren ryttare.</td>
+                <td>Nej</td>
+              </tr>
+              <tr>
+                <td>Pebble</td>
+                <td>Shetlandsponny</td>
+                <td>Barnvänlig, gillar att köra vagn.</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td>Freyja</td>
+                <td>Islandshäst</td>
+                <td>Stabil i trafik, tydlig tölt.</td>
+                <td>Ja</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form class="mx-auto" style="max-width: 240">
+          <div class="d-flex gap-3 flex-wrap flex-sm-nowrap mb-3">
+            <div class="w-100">
+              <label for="namn" class="form-label">Namn</label>
+              <input type="text" id="namn" class="form-control" required />
+            </div>
+            <div class="w-100">
+              <label for="ras" class="form-label">Välj ras</label>
+              <select id="ras" class="form-control">
+                <option>Svenskt varmblod</option>
+                <option>Arabiskt fullblod</option>
+                <option>Frieser</option>
+                <option>Shetlandsponny</option>
+                <option>Islandshäst</option>
+              </select>
+            </div>
+          </div>
+          <label for="beskrivning" class="form-label">Beskrivning</label>
+          <textarea
+            id="beskrivning"
+            rows="4"
+            class="form-control mb-3"
+          ></textarea>
+          <div class="form-check mb-3">
+            <input
+              id="till-salu"
+              type="checkbox"
+              value="true"
+              class="form-check-input"
+            />
+            <label for="till-salu" class="form-label"
+              >Kryssa i om hästen är till salu.</label
+            >
+          </div>
+          <button
+            id="tooltip"
+            data-toggle="tooltip"
+            title="Alfons Åberg"
+            type="submit"
+          >
+            Skicka
+          </button>
+        </form>
+      </section>
+    </main>
+    <script type="module">
+      import "./index.ts";
+    </script>
+  </body>
+</html>

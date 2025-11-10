@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dt193g-laboration1</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../">Laboration_1</a></li>
+        <li><a href="../tailwind/">Tailwind</a></li>
+        <li><a href="../bootstrap/">Bootstrap</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Publicering</h1>
+      <section>
+        <p>
+          Jag publicerade webbplatsen i Azure App Service, en PaaS-tjänst för
+          att köra samt skala webbappar och API:er. App Service stöder flera
+          språk och ramverk: C#/.NET, Java (Java SE, Tomcat och JBoss), Node.js,
+          Python och PHP. Tjänsten finns i både Windows- och Linux-miljöer.
+        </p>
+        <p>
+          Kostnaden för Azure App Service sträcker sig från gratis till höga
+          belopp beroende på vald App Service plan, instansstorlek (vCPU/RAM),
+          antal instanser och region.
+        </p>
+        <p>
+          Fördelarna med Azure App Service är skalbarhet utan driftstopp. Vid
+          ökad trafik kan man skala ut genom att lägga till fler instanser i App
+          Service-planen och skala in igen när belastningen sjunker. Priset
+          följer antal och storlek på instanserna så länge de körs, så extra
+          kostnad uppstår bara under tiden man faktiskt kör fler instanser. Man
+          kan även använda sig av autoskalning vilket gör detta automatiskt åt
+          dig. En nackdel är risken för onödigt höga kostnader om du väljer en
+          för stor plan eller aktiverar autoskalning utan rimliga gränser. Du
+          kan läsa mer om kostnadsfallgropar här:
+          <a
+            class="link"
+            href="https://www.reddit.com/r/AZURE/comments/1d2uoyc/the_horror_stories_of_unexpected_costs_for_azure/"
+            >www.reddit.com/r/AZURE/comments/1d2uoyc/the_horror_stories_of_unexpected_costs_for_azure/</a
+          >
+        </p>
+      </section>
+    </main>
+    <script type="module">
+      import "./index.ts";
+    </script>
+  </body>
+</html>

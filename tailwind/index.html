@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dt193g-laboration1</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../">Laboration_1</a></li>
+        <li><a href="../bootstrap/">Bootstrap</a></li>
+        <li><a href="../publicering/">Publicering</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="info">
+        <h1>Tailwind</h1>
+        <div>
+          <p class="mb-8">
+            <a href="https://tailwindcss.com/">Tailwind</a> CSS är ett öppet
+            källkodsramverk för CSS. Till skillnad från ramverk som Bootstrap
+            levererar det inga färdiga komponentklasser för knappar, tabeller
+            och liknande. I stället får du ett stort urval utility-klasser för
+            att styla valfria element.
+          </p>
+          <p class="mb-8">
+            Dessa klasser används i din markup och kan i CSS återanvändas via
+            @apply vid behov, vilket gör stylingen snabbare. Till exempel
+            motsvarar mt-8 värdet margin-top: 2rem och p-4 motsvarar padding:
+            1rem. Du kan skriva dem i elementens klassattribut eller använda
+            @apply i en egen CSS-klass.
+          </p>
+          <p class="mb-8">
+            Det finns många fler funktionaliteter, men detta är grunden. En
+            fördel är att det är enkelt att kombinera klasser för att snabbt
+            komponera en design, till skillnad från ramverk som erbjuder hela
+            färdigstylade komponenter.
+          </p>
+          <p class="mb-8">
+            En nackdel är att koden kan vara svårare att läsa för utvecklare som
+            inte är bekanta med Tailwind.
+          </p>
+          <p>
+            Min erfarenhet av ramverket är mestadels positiv. I början kändes
+            det ovant att skriva klasser direkt i HTML-filen, men ju fler
+            möjligheter jag upptäckte desto bättre blev upplevelsen. Jag har
+            bara skrapat på ytan, men med fördjupning tror jag att jag skulle
+            kunna bygga frontendprojekt betydligt snabbare än i dag mha detta
+            ramverk.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="overflow-x-auto mb-8">
+          <table>
+            <thead>
+              <tr>
+                <th>Namn</th>
+                <th>Ras</th>
+                <th>Beskrivning</th>
+                <th>Till salu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Atlas</td>
+                <td>Svenskt varmblod</td>
+                <td>Ambitiös hopphäst.</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td>Aisha</td>
+                <td>Arabiskt fullblod</td>
+                <td>Uthållig, vänlig.</td>
+                <td>Nej</td>
+              </tr>
+              <tr>
+                <td>Jarl</td>
+                <td>Frieser</td>
+                <td>Uttrycksfull, kräver erfaren ryttare.</td>
+                <td>Nej</td>
+              </tr>
+              <tr>
+                <td>Pebble</td>
+                <td>Shetlandsponny</td>
+                <td>Barnvänlig, gillar att köra vagn.</td>
+                <td>Ja</td>
+              </tr>
+              <tr>
+                <td>Freyja</td>
+                <td>Islandshäst</td>
+                <td>Stabil i trafik, tydlig tölt.</td>
+                <td>Ja</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form class="mx-auto max-w-240">
+          <div class="mb-8 flex flex-row gap-8 max-mobile:flex-wrap">
+            <div class="w-full">
+              <label for="namn" class="block mb-2">Namn</label>
+              <input
+                type="text"
+                id="namn"
+                class="w-full p-4 bg-gray-700 border rounded-lg focus:border-blue-500 outline-none"
+                required
+              />
+            </div>
+            <div class="w-full">
+              <label for="ras" class="block mb-2">Välj ras</label>
+              <select
+                id="ras"
+                class="w-full p-4 bg-gray-700 border rounded-lg focus:border-blue-500 outline-none"
+              >
+                <option>Svenskt varmblod</option>
+                <option>Arabiskt fullblod</option>
+                <option>Frieser</option>
+                <option>Shetlandsponny</option>
+                <option>Islandshäst</option>
+              </select>
+            </div>
+          </div>
+          <label for="beskrivning" class="block mb-2">Beskrivning</label>
+          <textarea
+            id="beskrivning"
+            rows="4"
+            class="mb-8 p-4 w-full bg-gray-700 border rounded-lg focus:border-blue-500 outline-none"
+          ></textarea>
+          <input
+            id="till-salu"
+            type="checkbox"
+            value="true"
+            class="w-6 h-6 rounded-lg"
+          />
+          <label for="till-salu">Kryssa i om hästen är till salu.</label>
+          <button
+            type="submit"
+            class="block mt-8 px-5 py-2.5 rounded-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-800 outline-none"
+          >
+            Skicka
+          </button>
+        </form>
+      </section>
+    </main>
+    <script type="module">
+      import "./index.ts";
+    </script>
+  </body>
+</html>
